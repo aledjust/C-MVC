@@ -1,0 +1,14 @@
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\Album.API.DataAccess.dll.config
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\Album.API.DataAccess.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\Album.API.DataAccess.pdb
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\Album.API.Utility.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\Album.API.Utility.pdb
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\obj\Debug\Album.API.DataAccess.csprojAssemblyReference.cache
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\obj\Debug\Album.API.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\obj\Debug\Album.API.DataAccess.csproj.CopyComplete
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\obj\Debug\Album.API.DataAccess.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.DataAccess\obj\Debug\Album.API.DataAccess.pdb

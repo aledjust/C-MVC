@@ -1,0 +1,5 @@
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.Utility\bin\Debug\Album.API.Utility.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.Utility\bin\Debug\Album.API.Utility.pdb
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.Utility\obj\Debug\Album.API.Utility.csproj.CoreCompileInputs.cache
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.Utility\obj\Debug\Album.API.Utility.dll
+C:\Users\aled.aled\Documents\CORVUS\ArtistsAPI\Artists.API.Utility\obj\Debug\Album.API.Utility.pdb

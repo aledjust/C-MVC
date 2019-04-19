@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="#" id="addAlbum" class="btn btn-success">
+                        <i class="material-icons">&#xE147;</i>
+                        <span>Add Album</span>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <h2><b>Artists Album</b></h2>
+                </div>
+            </div>
+        </div>
+        <table id="tableAlbums" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Num.</th>
+                    <th>Album Name</th>
+                    <th>Artist Name</th>
+                    <th>Date Release</th>
+                    <th>Sample Audio</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @*<tr>
+                    <td>1</td>
+                    <td>We Are Never Ever Getting Back Together</td>
+                    <td>UNKNOWN</td>
+                    <td>22 Jan 1980</td>
+                    <td><i class="material-icons" data-toggle="tooltip" title="Play">play_circle_filled</i></td>
+                    <td>320</td>
+                    <td>
+                        <a href="#editAlbumModal" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                        </a>
+                        <a href="#deleteAlbumModal" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>SDS</td>
+                    <td>UNKNOWN</td>
+                    <td>22 Jan 1980</td>
+                    <td><i class="material-icons" data-toggle="tooltip" title="Play">play_circle_filled</i></td>
+                    <td>320</td>
+                    <td>
+                        <a href="#editAlbumModal" class="edit" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                        </a>
+                        <a href="#deleteAlbumModal" class="delete" data-toggle="modal">
+                            <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                        </a>
+                    </td>
+                </tr>*@
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add Modal HTML -->
+<div id="addAlbumModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Add/Edit Album</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Album Name</label>
+                            <input id="txtAlbumName" type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Artist Name</label>
+                            <input id="txtArtistName" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Album Image URL</label>
+                            <input id="txtImageURL" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Audio Sample URL</label>
+                            <input id="txtAudioURL" type="text" class="form-control">
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Price</label>
+                            <input id="txtPrice" type="number" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Date Release</label>
+                            <input id="txtReleaseDate" type="date" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input id="btnAdd" type="button" class="btn btn-success" value="Add">
+                    <input id="btnUpdate" type="button" class="btn btn-success" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Delete Modal HTML -->
+<div id="deleteAlbumModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Album</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning"><small>This action cannot be undone.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input id="btnDelete" type="button" class="btn btn-danger" value="Delete">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Sound Modal-->
+<div id="showAudio" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body mb-0 p-0">
+                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half"> 
+                    <div>
+                        Artist Name  :<span id="artistName"></span></br>
+                        Album Name   :<span id="albumName"></span>
+                    </div>
+                    <center><img id="imgSrc" /></center>
+                </div>
+
+            </div>
+            <audio controls id="audioPlayer"><source id="audioSrc" type="audio/mp3" /></audio>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="albumsList" value='@Url.Action("GetAlbums","Album")' />
+<input type="hidden" id="getAlbum" value='@Url.Action("GetArtist","Album")' />
+<input type="hidden" id="addArtist" value='@Url.Action("CreateArtists","Album")' />
+<input type="hidden" id="deleteArtist" value='@Url.Action("DeleteArtist","Album")' />
+<input type="hidden" id="updateArtist" value='@Url.Action("UpdateArtist","Album")' />
